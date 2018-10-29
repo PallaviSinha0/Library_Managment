@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="css.css" type="text/css" rel="stylesheet"/>
+<meta http-equiv="Content-Type" content="text/html" charset=UTF-8">
+<title>Search</title>
+<script type="text/javascript">
+function validateForm() {
+    var x = document.getElementById('search').value;
+    if (x == "") {
+        document.getElementById("division").innerHTML = "<b>Please enter ISBN or title or author name of the book</b>";
+        return false;
+    }
+}
+</script>
+<style type="text/css">
+#division{
+	text-align: left;
+	color: red;
+}
+</style>
+</head>
+<body>
+<header>
+	<h1 align="center">Library Management System</h1>
+</header>
+<div id="header">
+	<ul id="navbar">
+	<li><a href='index.html'> Home </a></li>
+	</ul>
+</br>
+</div>
+
+<div id="menu">
+	<form action="searchBooks.php" onsubmit="return validateForm()" method="post">
+	Search for books:<input type="search" placeholder="Please enter ISBN or title or author name" name="search" id="search"/>
+	<input type="submit" value="Search"/>	
+	</form>
+	<div id="division">
+	</div>
+</div>	
+
+
+<div class="footer">
+	<h3 align="center"></hr>Copyright &copy; Pallavi Sinha</h3>
+
+</div>
+
+</body>
+
+
+
+</html>

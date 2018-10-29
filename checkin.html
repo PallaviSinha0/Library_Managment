@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+<link href="css.css" type="text/css" rel="stylesheet"/>
+<meta http-equiv="Content-Type" content="text/html" charset=UTF-8">
+<title>CheckIn</title>
+<script type="text/javascript">
+function validateForm() {
+    var x = document.getElementById('search').value;
+    if (x == "") {
+        document.getElementById("division").innerHTML = "<b>Please enter BookID, Borrower CardID or Borrower Name to check in</b>";
+        return false;
+    }
+}
+</script>
+<style type="text/css">
+#division{
+	text-align: left;
+	color: red;
+}
+</style>
+</head>
+<body>
+<header>
+	<h1 align="center">Library Management System</h1>
+</header>
+<div id="header">
+	<ul id="navbar">
+	<li><a href='index.html'> Home </a></li>
+	</ul>
+</br>
+</div>
+<div id="menu">
+	<form action="checkin.php" onsubmit="return validateForm()" method="post">
+	Search Check In Based on BookID(ISBN), Borrower CardID, Borrower Name:<input type="search" placeholder="Enetr BookID(ISBN) or Borrower CardID or Borrower Name" name="search" id="search"/>
+	<input type="submit" value="Search"/>	
+	</form>
+	<div id="division">
+	</div>
+</div>	
+
+
+<div class="footer">
+	<h3 align="center"></hr>Copyright &copy; Pallavi Sinha</h3>
+
+</div>
+
+</body>
+
+
+
+</html>
+	

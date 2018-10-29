@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+<link href="css.css" type="text/css" rel="stylesheet"/>
+<meta http-equiv="Content-Type" content="text/html" charset=UTF-8">
+<title>Pay Fines</title>
+<script type="text/javascript">
+function validateForm() {
+    var x = document.getElementById('search').value;
+    if (x == "") {
+        document.getElementById("division").innerHTML = "<b>Please enter Card ID</b>";
+        return false;
+    }
+}
+</script>
+<style type="text/css">
+#division{
+	text-align: left;
+	color: red;
+}
+</style>
+</head>
+<body>
+<header>
+	<h1 align="center">Library Management System</h1>
+</header>
+<div id="header">
+	<ul id="navbar">
+	<li><a href='index.html'> Home </a></li>
+	</ul>
+</br>
+</div>
+<br></br>
+<br></br>
+<br></br>
+
+<h3 align="center">*Please Checkin Books to pay the fine</br> <br> Books not Checked in will not be available to pay fine</br></h3>
+<div id="menu">
+	<form action="payfines.php" onsubmit="return validateForm()" method="post">
+	
+	Enter Card ID:<input type="search" placeholder="Enter card ID" name="search" id="search"/>
+	<input type="submit" value="Find"/>	
+	</form>
+	<div id="division">
+	</div>
+</div>	
+
+
+<div class="footer">
+	<h3 align="center"></hr>Copyright &copy; Pallavi Sinha</h3>
+
+</div>
+
+</body>
+
+
+
+</html>
+	
+
+
+
+
+

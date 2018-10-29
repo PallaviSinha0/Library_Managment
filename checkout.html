@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+<link href="css.css" type="text/css" rel="stylesheet"/>
+<meta http-equiv="Content-Type" content="text/html" charset=UTF-8">
+<title>Check Out</title>
+<script type="text/javascript">
+function validateForm() {
+    var x = document.getElementById('search').value;
+    if (x == "") {
+        document.getElementById("division").innerHTML = "<b>Please enter  Borrower CardID </b>";
+        return false;
+    }
+}
+</script>
+<style type="text/css">
+#division{
+	text-align: left;
+	color: red;
+}
+</style>
+</head>
+<body>
+<header>
+	<h1 align="center">Library Management System</h1>
+</header>
+<div id="header">
+	<ul id="navbar">
+	<li><a href='index.html'> Home </a></li>
+	</ul>
+</br>
+</div>
+<div id="menu">
+	<form action="searchBooks.php" onsubmit="return validateForm()" method="post">
+	Enter Borrower CardID: <input type="search" placeholder="Enter Borrower CardID " name="search" id="search"/>
+	<input type="submit" value="Find"/>	
+	</form>
+	<div id="division">
+	</div>
+</div>	
+
+
+<div class="footer">
+	<h3 align="center"></hr>Copyright &copy; Pallavi Sinha</h3>
+
+</div>
+
+</body>
+
+
+
+</html>
+	
+
+
+
